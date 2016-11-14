@@ -1,5 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Restaurant, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "has a name" do
+    dishoom = Restaurant.create!(name: "Dishoom")
+    expect(dishoom.name).to eq("Dishoom")
+  end
 end
