@@ -16,7 +16,7 @@ RSpec.describe "restaurants/all.html.erb", type: :view do
     end
     scenario "I can see all listed reviews per restaurant" do
       visit '/restaurants/all'
-      expect(page).to have_content("****")
+      expect(page).to have_content("😋😋😋😋")
       expect(page).to have_content("great food, big queue")
     end
   end

@@ -10,7 +10,7 @@
       <% reviews = restaurant.get_reviews(restaurant.id) %>
       <% reviews.each do |review| %>
       <div id = "review">
-        <%= "*" * review.rating %>
+        <%= "😋" * review.rating %>
         <%= review.comment %>
       </div>
     </ul>
