@@ -1,2 +1,11 @@
-<h1>Restaurant#all</h1>
-<p>Find me in app/views/restaurants/all.html.erb</p>
+<h1 class="headings"> Your Local Restaurants </h1>
+
+<ul> <% @restaurants.each do |restaurant| %>
+  <ls>
+    <h2> <%= restaurant.name %> </h2>
+    <p> <%= restaurant.description %> </p>
+    <p> <%= restaurant.location %> </p>
+
+</ls>
+  <% end %>
+</ul>
