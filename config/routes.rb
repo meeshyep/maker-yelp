@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get 'restaurants/new'
 
+  post 'restaurants/create'
+
   get 'restaurants/all'
 
   get "/" => redirect("/main/home")
