@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  get 'main/home'
+
   get 'restaurants/new'
 
   get 'restaurants/all'
+
+  get "/" => redirect("/main/home")
 
   devise_for :users
 
