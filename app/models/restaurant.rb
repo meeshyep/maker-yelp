@@ -4,4 +4,9 @@ class Restaurant < ActiveRecord::Base
   validates :location, presence: true
 
   has_many :reviews, dependent: :destroy
+
+  def get_reviews(restaurant_id)
+    Review.where(restaurant_id: restaurant_id)
+  end
+
 end

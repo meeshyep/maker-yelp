@@ -1,11 +1,21 @@
 <h1 class="headings"> Your Local Restaurants </h1>
 
-<ul> <% @restaurants.each do |restaurant| %>
-  <ls>
+<ls> <% @restaurants.each do |restaurant| %>
+  <div id="restaurant">
+  <ul>
     <h2> <%= restaurant.name %> </h2>
-    <p> <%= restaurant.description %> </p>
-    <p> <%= restaurant.location %> </p>
-
-</ls>
+    <p>  <%= restaurant.location %> </p>
+    <p>  <%= restaurant.description %> </p>
+    <ul>
+      <% reviews = restaurant.get_reviews(restaurant.id) %>
+      <% reviews.each do |review| %>
+      <div id = "review">
+        <%= "*" * review.rating %>
+        <%= review.comment %>
+      </div>
+    </ul>
+    <% end %>
+  </ul>
+</div>
   <% end %>
-</ul>
+</ls>
