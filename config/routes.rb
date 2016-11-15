@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'restaurants/new'
 
+  post 'restaurants/create'
+
   get 'restaurants/all'
 
   devise_for :users

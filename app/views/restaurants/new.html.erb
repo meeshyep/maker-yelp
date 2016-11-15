@@ -1,2 +1,9 @@
-<h1>Restaurants#new</h1>
-<p>Find me in app/views/restaurants/new.html.erb</p>
+<h1>Add restaurant</h1>
+
+<%= form_for :restaurant, url: {action: "create"}, html: {class: "new_restaurant"} do |r| %>
+  <p>Name</p>
+  <%= r.text_field :name %><br><br>
+  <p>Description</p>
+  <%= r.text_area :description %><br><br>
+  <%= r.submit "Save" %>
+<% end %>
