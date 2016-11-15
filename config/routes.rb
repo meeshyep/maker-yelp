@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'review/new'
+
   get 'main/home'
 
   get 'restaurants/new'
