@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
+  get 'restaurants/new'
+
+  get 'restaurants/all'
+
   devise_for :users
+
+#root :to => 'home#main'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
