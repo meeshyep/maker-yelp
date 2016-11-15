@@ -1,5 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe "restaurant/all.html.erb", type: :view do
-  pending "add some examples to (or delete) #{__FILE__}"
+RSpec.describe "restaurants/all.html.erb", type: :view do
+  feature "listing all restaurants" do
+    scenario "I can list all saved restaurants" do
+      dishoom = Restaurant.create!(name:"Dishoom", description:"tasty indian food, love the black dal", location: "old street")
+      visit '/restaurants/all'
+      expect(page).to have_content("Dishoom")
+      expect(page).to have_content("tasty indian food, love the black dal")
+      expect(page).to have_content("old street")
+    end
+  end
 end
