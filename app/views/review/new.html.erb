@@ -2,7 +2,7 @@
 <%= form_for :review, url: {action: "create"}, html: {class: "new_review"} do |r| %>
   <%= r.hidden_field :id, :value => @id  %>
   <p>Rating</p>
-  <%= r.number_field :rating, max: 5 %><br><br>
+  <%= r.number_field :rating, min:1, max: 5 %><br><br>
   <p>Comment</p>
   <%= r.text_field :comment %><br><br>
   <%= r.submit "Save" %>
