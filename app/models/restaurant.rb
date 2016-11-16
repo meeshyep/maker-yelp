@@ -2,6 +2,7 @@ class Restaurant < ActiveRecord::Base
   validates :name, presence: true
   validates :description, presence: true
   validates :location, presence: true
+  validates :user, presence: true
 
   has_many :reviews, dependent: :destroy
   belongs_to :user

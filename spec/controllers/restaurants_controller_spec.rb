@@ -27,4 +27,13 @@ RSpec.describe RestaurantsController, type: :controller do
     end
   end
 
+  describe "POST #create" do
+    let(:user) { FactoryGirl.create(:user) }
+
+    it "redirects to #all" do
+      sign_in user
+      expect { post :create, :restaurant => { :name => "Best Restaurant", :description => "It's really great", :location => "2 Tower Hill"} }.to change { Restaurant.count }
+    end
+  end
+
 end
