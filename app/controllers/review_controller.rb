@@ -8,9 +8,6 @@ class ReviewController < ApplicationController
   end
 
   def create
-    @id = params[:review][:id]
-    p @id
-    # @review = Review.create(review_params)
     @restaurant = Restaurant.find_by_id(params[:review][:id])
     @review = @restaurant.reviews.create(review_params)
     @review.save
