@@ -5,6 +5,9 @@ class RestaurantsController < ApplicationController
   end
 
   def new
+    if !user_signed_in?
+      redirect_to '/restaurants/all'
+    end
   end
 
   def create
