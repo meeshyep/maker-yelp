@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   get 'review/new'
+=======
+  # get 'review/new'
+
+>>>>>>> create_review
 
   get 'main/home'
 
@@ -8,6 +13,10 @@ Rails.application.routes.draw do
   post 'restaurants/create'
 
   get 'restaurants/all'
+
+  post 'review/create'
+
+  get '/review/new'
 
   get "/" => redirect("/main/home")
 

@@ -1,2 +1,11 @@
-<h1>Review#new</h1>
-<p>Find me in app/views/review/new.html.erb</p>
+<h1>Write Your Review</h1>
+
+<%= form_for :review, url: {action: "create"}, html: {class: "new_review"} do |r| %>
+  "<%= id = @id %>"
+  <%= r.hidden_field :id, :value => @id  %>
+  <p>Rating</p>
+  <%= r.number_field :rating %><br><br>
+  <p>Comment</p>
+  <%= r.text_field :comment %><br><br>
+  <%= r.submit "Save" %>
+<% end %>
