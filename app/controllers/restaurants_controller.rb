@@ -5,10 +5,14 @@ class RestaurantsController < ApplicationController
   end
 
   def new
+    if !user_signed_in?
+      redirect_to '/restaurants/all'
+    end
   end
 
   def create
     @restaurant = Restaurant.new(restaurant_params)
+    @restaurant.user_id = current_user.id
     @restaurant.save
     redirect_to '/restaurants/all'
   end

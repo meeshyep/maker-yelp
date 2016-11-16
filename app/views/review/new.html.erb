@@ -1,6 +1,6 @@
 <h1>Write Your Review</h1>
 <%= form_for :review, url: {action: "create"}, html: {class: "new_review"} do |r| %>
-  "<%= id = @id %>"
+  <% id = @id %>
   <%= r.hidden_field :id, :value => @id  %>
   <p>Rating</p>
   <%= r.number_field :rating, max: 5 %><br><br>

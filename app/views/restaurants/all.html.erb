@@ -6,7 +6,7 @@
     <p> <%= restaurant.description %> </p>
     <p> <%= restaurant.location %> </p>
     <form action="/review/new" method="get">
-      <input type="submit" value="Write Review">
+      <input type="submit" name="write_review" value="Write Review">
       <input type="hidden" name="restaurant" value="<%=restaurant.id %>" >
     </form>
 </ls>
