@@ -14,6 +14,7 @@
       <% reviews = restaurant.get_reviews(restaurant.id) %>
       <% reviews.each do |review| %>
       <div id = "review">
+        <%= User.find_by_id(review.user_id).email%> wrote:
         <%= "😋" * review.rating %>
         <%= review.comment %>
       </div>
