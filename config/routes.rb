@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
   get 'review/new'
-=======
-  # get 'review/new'
-
->>>>>>> create_review
 
   get 'main/home'
 

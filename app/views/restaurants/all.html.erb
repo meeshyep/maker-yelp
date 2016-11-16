@@ -11,8 +11,6 @@
       <input type="hidden" name="restaurant" value="<%=restaurant.id %>" >
     </form>
 </ls>
-    <p>  <%= restaurant.location %> </p>
-    <p>  <%= restaurant.description %> </p>
     <ul>
       <% reviews = restaurant.get_reviews(restaurant.id) %>
       <% reviews.each do |review| %>
