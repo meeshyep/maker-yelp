@@ -7,6 +7,7 @@
     <p> <%= restaurant.description %> </p>
     <p> <%= restaurant.location %> </p>
     <%= link_to "Write Review", new_review_path(restaurant)%>
+    <%= link_to("Delete", restaurant_path(restaurant), method: :delete, data: { confirm: 'Are you sure?' }) %>
 </ls>
     <ul>
       <% reviews = restaurant.get_reviews(restaurant.id) %>

@@ -1,22 +1,27 @@
 Rails.application.routes.draw do
 
+  resources :restaurants
+  resources :reviews
+
   get 'main/home'
+  #
+  # get 'restaurants/new'
+  #
+  # post 'restaurants/create'
+  #
+  # get 'restaurants/all'
+  #
+  # post 'reviews/create'
+  #
+  # get 'restaurants/account'
 
-  get 'restaurants/new'
-
-  post 'restaurants/create'
-
-  get 'restaurants/account'
-
-  get 'restaurants/edit'
-
-  patch 'restaurants/update'
-
-  get 'restaurants/all'
-
-  post 'reviews/create'
-
-  get  '/reviews/new/:restaurant_id', :to => 'reviews#new',  :as => 'new_review'
+  # get 'restaurants/edit'
+  #
+  # patch 'restaurants/update'
+  #
+  # delete 'restaurants/destroy'
+  #
+  # get  '/reviews/new/:restaurant_id', :to => 'reviews#new',  :as => 'new_review'
 
   get "/" => redirect("/main/home")
 

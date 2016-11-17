@@ -1,6 +1,6 @@
 class RestaurantsController < ApplicationController
 
-  def all
+  def index
     @restaurants = Restaurant.all
   end
 
@@ -36,8 +36,14 @@ class RestaurantsController < ApplicationController
     end
   end
 
-  def method_name
+  def delete
+    @restaurant = Restaurant.find(params[:id])
+  end
 
+  def destroy
+    @restaurant = Restaurant.find(params[:id]).destroy
+    # flash[:notice] = "This restaurant has been deleted."
+    redirect_to(action: 'restaurants')
   end
 
   private
