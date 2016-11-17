@@ -7,10 +7,6 @@
     <p> <%= restaurant.description %> </p>
     <p> <%= restaurant.location %> </p>
     <%= link_to "Write Review", new_review_path(restaurant)%>
-    <!-- # <form action="/review/new" method="get">
-    #   <input type="submit" name="write_review" value="Write Review">
-    #   <input type="hidden" name="restaurant" value="<%=restaurant.id %>" >
-    # </form> -->
 </ls>
     <ul>
       <% reviews = restaurant.get_reviews(restaurant.id) %>
