@@ -17,6 +17,20 @@ class RestaurantsController < ApplicationController
     redirect_to '/restaurants/all'
   end
 
+  def account
+    @restaurants = Restaurant.where(user_id: current_user.id)
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def method_name
+
+  end
+
   private
   def restaurant_params
     params.require(:restaurant).permit(:name, :description, :location)
