@@ -1,14 +1,12 @@
 <h1 class="headings"> Your Local Restaurants </h1>
+
 <ls> <% @restaurants.each do |restaurant| %>
   <div id="restaurant">
   <ul>
     <h2> <%= restaurant.name %> </h2>
     <p> <%= restaurant.description %> </p>
     <p> <%= restaurant.location %> </p>
-    <form action="/review/new" method="get">
-      <input type="submit" name="write_review" value="Write Review">
-      <input type="hidden" name="restaurant" value="<%=restaurant.id %>" >
-    </form>
+    <%= link_to "Write Review", new_review_path(restaurant)%>
 </ls>
     <ul>
       <% reviews = restaurant.get_reviews(restaurant.id) %>

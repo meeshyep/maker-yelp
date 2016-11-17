@@ -28,15 +28,12 @@ module WebHelpers
 
   def submit_review
     visit '/restaurants/all'
-    click_button 'Write Review'
+    click_link 'Write Review'
     fill_in 'review_rating', with: 4
     fill_in 'review_comment', with: "great food, big queue"
     click_button "Save"
   end
 
-  def sign_out
-    
-  end
 
 
 

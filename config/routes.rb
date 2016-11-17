@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'review/new'
 
   get 'main/home'
 
@@ -9,9 +8,9 @@ Rails.application.routes.draw do
 
   get 'restaurants/all'
 
-  post 'review/create'
+  post 'reviews/create'
 
-  get '/review/new'
+  get  '/reviews/new/:restaurant_id', :to => 'reviews#new',  :as => 'new_review'
 
   get "/" => redirect("/main/home")
 

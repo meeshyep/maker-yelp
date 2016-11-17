@@ -1,11 +1,10 @@
-class ReviewController < ApplicationController
+class ReviewsController < ApplicationController
   before_action do
     @currentUser = current_user.id
   end
 
   def new
-    @id = params[:restaurant]
-
+    @id = params[:restaurant_id]
   end
 
   def create
