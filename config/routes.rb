@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get 'restaurants/edit'
 
-  post 'restaurants/update'
+  patch 'restaurants/update'
 
   get 'restaurants/all'
 

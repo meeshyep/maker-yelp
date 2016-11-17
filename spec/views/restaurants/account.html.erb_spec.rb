@@ -10,7 +10,6 @@ RSpec.describe "restaurants/account.html.erb", type: :view do
       click_link"Logout"
       create_user2
       add_restaurant2
-
       visit '/restaurants/account'
       expect(page).to have_content("Trade")
       expect(page).not_to have_content("Dishoom")

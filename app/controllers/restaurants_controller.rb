@@ -26,10 +26,14 @@ class RestaurantsController < ApplicationController
   end
 
   def update
-    # @restaurant = Restaurant.find(params[:id])
-    #
-    # if @restaurant.update_attributes(params[:])
-
+    @restaurant = Restaurant.find(params[:id])
+    if @restaurant.update_attributes!(restaurant_params)
+      flash[:notice] = "Your restaurant has been updated."
+      redirect_to(action: 'account')
+    else
+      flash[:notice] = "Your restaurant failed to update. Please try again."
+      redirect_to(action: 'edit')
+    end
   end
 
   def method_name
