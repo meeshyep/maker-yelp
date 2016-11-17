@@ -1,5 +1,5 @@
 class Restaurant < ActiveRecord::Base
-  has_attached_file :image
+  has_attached_file :image, :default_url => ":style/default.png"
   validates_attachment_file_name :image, :matches => [/png\Z/, /jpe?g\Z/, /gif\Z/]
   validates :name, presence: true
   validates :description, presence: true
