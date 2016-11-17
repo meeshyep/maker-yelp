@@ -26,6 +26,14 @@ module WebHelpers
     click_button 'Save'
   end
 
+  def add_restaurant2
+    visit '/restaurants/new'
+    fill_in 'restaurant_name', with: "Trade"
+    fill_in 'restaurant_location', with: "Commercial Street"
+    fill_in 'restaurant_description', with: "Artisinal coffee"
+    click_button 'Save'
+  end
+
   def submit_review
     visit '/restaurants/all'
     click_link 'Write Review'

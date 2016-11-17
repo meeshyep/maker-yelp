@@ -1,0 +1,9 @@
+<%= form_for :restaurant, url: {action: "create"}, html: {class: "new_restaurant"} do |r| %>
+  <p>Name</p>
+  <%= r.text_field :name %><br><br>
+  <p>Location</p>
+  <%= r.text_field :location %><br><br>
+  <p>Description</p>
+  <%= r.text_area :description %><br><br>
+  <%= r.submit "Save" %>
+<% end %>

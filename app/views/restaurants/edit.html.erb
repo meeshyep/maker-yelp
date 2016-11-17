@@ -1,0 +1,5 @@
+<h1>Edit <%=@restaurant.name%></h1>
+
+<%=form_for(@restaurant, url: {action: 'update', id: @restaurant.id}) do |r| %>
+<%= render(partial: "form", locals: {r: r}) %>
+<%end%>

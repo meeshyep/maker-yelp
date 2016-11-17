@@ -6,6 +6,12 @@ Rails.application.routes.draw do
 
   post 'restaurants/create'
 
+  get 'restaurants/account'
+
+  get 'restaurants/edit'
+
+  post 'restaurants/update'
+
   get 'restaurants/all'
 
   post 'reviews/create'
