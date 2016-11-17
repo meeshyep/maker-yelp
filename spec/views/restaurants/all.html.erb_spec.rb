@@ -13,7 +13,7 @@ RSpec.describe "restaurants/all.html.erb", type: :view do
       expect(page).to have_content("Dishoom")
       expect(page).to have_content("tasty indian food")
       expect(page).to have_content("old street")
-      expect(page).to have_content("😋😋😋😋")
+      expect(page).to have_content("⭐️⭐️⭐️⭐️")
       expect(page).to have_content("great food, big queue")
     end
   end
