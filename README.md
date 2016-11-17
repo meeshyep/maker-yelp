@@ -17,46 +17,72 @@ I can edit my restaurant details
 ```
 As a user
 So I can keep my restaurant details up to date
-I can remove my restaurant
+I can remove my restaurant restaurant details
 ```
 ```
 As a user
-So I can state my opinion in public
+So I can state my opinion about restaurants
 I can rate and review restaurants
 ```
 ```
 As a user
-So I can decide what restaurant to go to
-I want to browse all restaurants and reviews
+So I can decide which restaurant to go to
+I can browse all restaurants' reviews
+```
+```
+As a user,
+So I can decide which restaurant to go to
+I can browse the average rating of each restaurant
 ```
 
 ##V2##
 ```
-As a reviewer
+As a user
 So I can leave a review
-I want to be able to sign up
+I can register/login
 ```
 ```
 As a user
-So i can see my past reviews
-I want to be able to log in/log out and display email address
+So I know my login was successful
+I can see if I am currently logged in
+```
+```
+As a user
+So I can see actions available to me
+I can logout or edit my account
+```
+```
+As a user
+So I can see which review I left
+I can see my email address displayed as part of the review
 ```
 ```
 As a restaurant owner
 So I cannot boost my rating
-I cannot review my own listings
+I cannot review my own restaurants
 ```
 
 ##V3##
+
+```
+As a restaurant owner
+So I can add my restaurant to the site
+I must be logged in
+```
 ```
 As a restaurant owner
 So I can keep my restaurant details up to date
-Only I can edit my listing
+Only I can edit my restaurant listing
 ```
 ```
-As restaurant owner
-So reviewers cannot skew my ratings
-Reviewers can only leave one review per listing
+As a restaurant owner
+So I can keep my restaurant details up to date
+Only I can delete my restaurant listing
+```
+```
+As a reviewer
+So I cannot skew restaurant ratings
+I can only leave one review per restaurant listing
 ```
 ```
 As a user
