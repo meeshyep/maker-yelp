@@ -1,5 +1,4 @@
-<h1>Edit <%=@restaurant.name%></h1>
-
 <%=form_for(@restaurant, url: {action: 'update', id: @restaurant.id}) do |r| %>
+<h2 style="margin-left:45%;">Edit <%=@restaurant.name%></h2>
 <%= render(partial: "form", locals: {r: r}) %>
 <%end%>

@@ -1,11 +1,14 @@
+<div class="container" style="padding: 100px 400px 0px 400px;">
 <%= form_for :restaurant, url: { action: "create"}, :html => { :multipart => true } do |form| %>
   <p>Name</p>
-  <%= form.text_field :name%>
+  <%= form.text_field :name, class: 'form-control', placeholder: 'Name'%>
   <p>Location</p>
-  <%= form.text_field :location %><br><br>
+  <%= form.text_field :location, class: 'form-control', placeholder: 'Location' %><br><br>
   <p>Description</p>
-  <%= form.text_area :description %><br><br>
+  <%= form.text_area :description, class: 'form-control', placeholder: 'Description' %><br><br>
   <p>Image</p>
   <%= form.file_field :image %>
-  <%= r.submit "Save" %>
+  <%= form.button "Save", class: 'btn btn-lg btn-primary btn-block' %>
 <% end %>
+
+</div>

@@ -1,11 +1,10 @@
-<h1>Write Your Review</h1>
+<div class="container" style="padding: 100px 400px 0px 400px;">
 <%= form_for :review, url: {action: "create"}, html: {class: "new_review"} do |r| %>
+<h2 class="form-signin-heading">Write Your Review</h2>
   <%= r.hidden_field :id, :value => @id  %>
-  <p>Rating</p>
-  <%= r.number_field :rating, min:1, max: 5 %><br><br>
-  <p>Comment</p>
-  <%= r.text_field :comment %><br><br>
-  <p>Image</p>
- <%= r.file_field :image %><br><br>
-  <%= r.submit "Save" %>
+  <%= r.number_field :rating, min:1, max: 5 , class: 'form-control', placeholder: 'Rating'%><br><br>
+  <%= r.text_field :comment, class: 'form-control', placeholder: 'Comment'%><br><br>
+ <%= r.file_field :image, class: 'form-control', placeholder: 'Image'%><br><br>
+ <%= r.button "Save", class: 'btn btn-lg btn-primary btn-block' %>
 <% end %>
+</div>
