@@ -6,7 +6,7 @@ class RestaurantsController < ApplicationController
 
   def new
     if !user_signed_in?
-      redirect_to '/restaurants/all'
+      redirect_to '/restaurants'
     end
   end
 
@@ -14,7 +14,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.new(restaurant_params)
     @restaurant.user_id = current_user.id
     @restaurant.save
-    redirect_to '/restaurants/all'
+    redirect_to '/restaurants'
   end
 
   def account
@@ -29,10 +29,10 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
     if @restaurant.update_attributes!(restaurant_params)
       flash[:notice] = "Your restaurant has been updated."
-      redirect_to(action: 'account')
+      redirect_to '/restaurants'
     else
       flash[:notice] = "Your restaurant failed to update. Please try again."
-      redirect_to(action: 'edit')
+      redirect_to '/restaurants'
     end
   end
 
@@ -43,7 +43,7 @@ class RestaurantsController < ApplicationController
   def destroy
     @restaurant = Restaurant.find(params[:id]).destroy
     # flash[:notice] = "This restaurant has been deleted."
-    redirect_to(action: 'restaurants')
+    redirect_to '/restaurants'
   end
 
   private

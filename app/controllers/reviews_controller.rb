@@ -11,13 +11,13 @@ class ReviewsController < ApplicationController
     @restaurant = Restaurant.find_by_id(params[:review][:id])
     if current_user.has_already_reviewed? @restaurant
       flash[:notice]='Have you left a review before? Just stop.'
-      redirect_to '/restaurants/all'
+      redirect_to '/restaurants'
     elsif @currentUser == @restaurant.user_id
       flash[:notice]='Is this your own restaurant? You cannot do that.'
-      redirect_to '/restaurants/all'
+      redirect_to '/restaurants'
     else
       User.create_review(@restaurant, @currentUser, review_params)
-      redirect_to '/restaurants/all'
+      redirect_to '/restaurants'
     end
   end
 

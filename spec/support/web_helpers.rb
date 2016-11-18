@@ -1,7 +1,7 @@
 module WebHelpers
 
   def create_user
-    visit '/main/home'
+    visit '/'
     click_link 'Register'
     fill_in 'Email', with: "test@testuser.com"
     fill_in 'Password', with: "123456"
@@ -10,7 +10,7 @@ module WebHelpers
   end
 
   def create_user2
-    visit '/main/home'
+    visit '/'
     click_link 'Register'
     fill_in 'Email', with: "test2@testuser.com"
     fill_in 'Password', with: "123456"
@@ -35,7 +35,7 @@ module WebHelpers
   end
 
   def submit_review
-    visit '/restaurants/all'
+    visit '/restaurants'
     click_link 'Write Review'
     fill_in 'review_rating', with: 4
     fill_in 'review_comment', with: "great food, big queue"
