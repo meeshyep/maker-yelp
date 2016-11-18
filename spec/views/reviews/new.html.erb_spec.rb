@@ -7,7 +7,7 @@ RSpec.describe "reviews/new.html.erb", type: :view do
       click_link"Logout"
       create_user2
       submit_review
-      expect(page).to have_content("😋😋😋😋")
+      expect(page).to have_content("⭐️⭐️⭐️⭐️")
       expect(page).to have_content("great food, big queue")
     end
   end

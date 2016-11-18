@@ -1,28 +1,18 @@
 Rails.application.routes.draw do
 
-  get 'main/home'
+  resources :restaurants do
+    resources :reviews
+  end
 
-  get 'restaurants/new'
-
-  post 'restaurants/create'
-
-  get 'restaurants/all'
-
-  post 'reviews/create'
-
-  get  '/reviews/new/:restaurant_id', :to => 'reviews#new',  :as => 'new_review'
-
-  get "/" => redirect("/main/home")
-
+  resources :main
+  
   devise_for :users
-
-  root :to => 'home#main'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'main#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

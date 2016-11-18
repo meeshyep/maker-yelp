@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe "restaurants/all.html.erb", type: :view do
+RSpec.describe "restaurants.html.erb", type: :view do
 
   describe "listing all restaurants" do
     scenario "I can list all saved restaurants" do
-      visit '/restaurants/all'
+      visit '/restaurants'
       create_user
       add_restaurant
       click_link"Logout"
