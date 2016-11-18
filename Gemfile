@@ -30,6 +30,8 @@ gem 'devise'
 
 gem 'omniauth'
 
+gem 'puma'
+
 gem 'omniauth-facebook'
 
 gem 'capybara'
