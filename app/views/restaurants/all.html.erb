@@ -1,24 +1,52 @@
-<h1 class="headings"> Your Local Restaurants </h1>
-
-<ls> <% @restaurants.each do |restaurant| %>
-  <div id="restaurant">
-  <ul>
-    <h2> <%= restaurant.name %> </h2>
-    <p> <%= restaurant.description %> </p>
-    <p> <%= restaurant.location %> </p>
-    <%= link_to "Write Review", new_review_path(restaurant)%>
-</ls>
-    <ul>
-      <% reviews = restaurant.get_reviews(restaurant.id) %>
-      <% reviews.each do |review| %>
-      <div id = "review">
-        <%= User.find_by_id(review.user_id).email%> wrote:
-        <%= "😋" * review.rating %>
-        <%= review.comment %>
-      </div>
-    </ul>
-    <% end %>
-  </ul>
+<div class="jumbotron text-center">
+  <h1 class="headings"> Your Local Restaurants </h1>
 </div>
+<div class="container">
+  <% @restaurants.each do |restaurant| %>
+  <div class="restaurants">
+    <div class="row">
+      <div class="col-xs-3">
+        <img src="<%=restaurant.image%>" height="150" width="200"></img>
+      </div>
+      <div class="col-xs-4">
+        <h2> <%= restaurant.name %> </h2>
+        <% average_rating = 0 %>
+        <% if restaurant.reviews.length != 0  %>
+        <% restaurant.reviews.each do |review| %>
+        <% average_rating += review.rating  %>
+        <% end %>
+        <% average_rating = average_rating/restaurant.reviews.length%>
+        <% end %>
+        <p> <%= "⭐️" * average_rating %> </p>
+        <p> <%= restaurant.description %> </p>
+        <p> <%= restaurant.location %> </p>
+        <%= link_to "Write Review", new_review_path(restaurant)%>
+      </div>
+      <div class="col-xs-4">
+        <h3>Reviews</h3>
+        <% reviews = restaurant.get_reviews(restaurant.id) %>
+        <% reviews.last(3).each do |review| %>
+        <%= User.find_by_id(review.user_id).email%> wrote:
+        <%= "⭐️" * review.rating %>
+        <%= review.comment %><br>
+        <% end %>
+      </div>
+    </div><br>
+    <hr>
+  </div>
+
   <% end %>
-</ls>
+</div>
+<style>
+h2, h3 {
+  padding: 0px;
+  margin-top: 0px;
+}
+hr {    display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;}
+  </style>
