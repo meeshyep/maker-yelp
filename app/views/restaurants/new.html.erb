@@ -1,4 +1,4 @@
 <h1>Add restaurant</h1>
-<%= form_for :restaurant, url: {action: "create"}, html: {class: "new_restaurant"} do |r| %>
+<%= form_for :restaurant, url: {action: "create"}, html: {class: "new_restaurant", multipart: true} do |r| %>
 <%= render(partial: "form", locals: {r: r}) %>
 <% end %>

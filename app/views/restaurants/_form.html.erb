@@ -1,9 +1,11 @@
-<%= form_for :restaurant, url: {action: "create"}, html: {class: "new_restaurant"} do |r| %>
+<%= form_for :restaurant, url: { action: "create"}, :html => { :multipart => true } do |form| %>
   <p>Name</p>
-  <%= r.text_field :name %><br><br>
+  <%= form.text_field :name%>
   <p>Location</p>
-  <%= r.text_field :location %><br><br>
+  <%= form.text_field :location %><br><br>
   <p>Description</p>
-  <%= r.text_area :description %><br><br>
+  <%= form.text_area :description %><br><br>
+  <p>Image</p>
+  <%= form.file_field :image %>
   <%= r.submit "Save" %>
 <% end %>
