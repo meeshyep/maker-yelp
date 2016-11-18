@@ -36,7 +36,7 @@ gem 'omniauth-facebook'
 
 gem 'capybara'
 
-gem "paperclip", "~> 4.1.1"
+gem "paperclip", "~> 4.2"
 
 
 
