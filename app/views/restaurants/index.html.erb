@@ -1,6 +1,9 @@
 <div class="jumbotron text-center">
   <h1 class="headings"> Your Local Restaurants </h1>
 </div>
+<% if user_signed_in?%>
+<p style="margin-left: 1200px;"> <%= link_to "Add new restaurant", new_restaurant_path%></p>
+<% end %>
 <div class="container">
   <% @restaurants.each do |restaurant| %>
   <div class="restaurants">
