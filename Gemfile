@@ -28,6 +28,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 
+gem 'jquery-rails'
+
 gem 'omniauth'
 
 gem 'puma'
