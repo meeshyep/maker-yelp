@@ -1,5 +1,9 @@
 # README
 
+Technologies involved: Ruby on Rails, Bootstrap, OOD, testing via RSpec and Coveralls support is integrated
+
+This is a mock project that implements the basic features of Yelp:
+
 ##User Stories##
 
 ##MVP##

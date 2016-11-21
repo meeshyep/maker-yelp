@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
-
+ 
 gem 'jquery-rails'
 
 gem 'omniauth'
@@ -39,7 +39,6 @@ gem 'omniauth-facebook'
 gem 'capybara'
 
 gem "paperclip", "~> 4.2"
-
 
 
 # Use ActiveModel has_secure_password
